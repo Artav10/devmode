@@ -51,7 +51,6 @@ function New-VSCTask {
 "@ | Set-Content -Encoding UTF8 $tasksFile
   }
   else {
-    Write-Host "Updating tasks.json for $command in $vscodeDir"
     $jsonContent = Get-Content -Raw -Path $tasksFile | ConvertFrom-Json
     
     # Ensure tasks array exists

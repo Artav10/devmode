@@ -38,7 +38,7 @@
             "minecraft": { "enabled": true }
         },
 
-        "customCommands": [{ "command": "tree", "location": "C:/Users/Theo/Documents" }]
+        "customCommands": [{ "command": "tree", "location": "C:/Users/Theo/Downloads" }, { "command": "node -v" }]
     },
     "discord-bot": {
         "nbArgs": 1,

@@ -42,6 +42,12 @@ function Invoke-GenericLaunch {
     Start-Apps -apps $currentProfile.apps -VerboseMode:$VerboseMode
   }
 
+  #Custom commands
+  . "$PSScriptRoot\lib\launch\custom_commands.ps1"
+  if ( $currentProfile.customCommands ) {
+    Invoke-CustomCommands -commands $currentProfile.customCommands -VerboseMode:$VerboseMode
+  }
+
   exit 0
 }
 
