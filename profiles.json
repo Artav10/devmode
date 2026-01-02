@@ -1,0 +1,43 @@
+{
+    "minecraft": {
+        "nbArgs": 1,
+        "git": {
+            "details": [
+                {
+                    "path": "C:/Users/Theo/AppData/Roaming/Minecraft Bedrock/Users/Shared/games/com.mojang/development_resource_packs/${argsFromProfile_0}_RP",
+                    "commands": ["pull", "status"]
+                },
+                {
+                    "path": "C:/Users/Theo/AppData/Roaming/Minecraft Bedrock/Users/Shared/games/com.mojang/development_behavior_packs/${argsFromProfile_0}_BP",
+                    "commands": ["pull", "status"]
+                }
+            ]
+        },
+
+        "apps": {
+            "firefox": {
+                "urls": [
+                    "https://learn.microsoft.com/en-us/minecraft/creator/",
+                    "https://chatgpt.com/",
+                    "C:/Users/Theo/Documents/Code/MC/${argsFromProfile_0}/Doc.url"
+                ]
+            },
+            "spotify": { "enabled": true },
+            "code": {
+                "details": [
+                    {
+                        "path": "C:/Users/Theo/AppData/Roaming/Minecraft Bedrock/Users/Shared/games/com.mojang/development_resource_packs/${argsFromProfile_0}_RP",
+                        "withCommandInTerminal": ["tree /F", "echo Resource Pack Opened"]
+                    },
+                    {
+                        "path": "C:/Users/Theo/AppData/Roaming/Minecraft Bedrock/Users/Shared/games/com.mojang/development_behavior_packs/${argsFromProfile_0}_BP",
+                        "withCommandInTerminal": ["tsc --watch"]
+                    }
+                ]
+            },
+            "minecraft": { "enabled": true }
+        },
+
+        "customCommands": [{ "command": "tree", "location": "C:/Users/Theo/Documents" }]
+    }
+}
