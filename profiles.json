@@ -39,5 +39,43 @@
         },
 
         "customCommands": [{ "command": "tree", "location": "C:/Users/Theo/Documents" }]
+    },
+    "discord-bot": {
+        "nbArgs": 1,
+
+        "git": {
+            "details": [
+                {
+                    "path": "C:/Users/Theo/Documents/Code/DiscordBots/${argsFromProfile_0}",
+                    "commands": ["pull", "status"]
+                }
+            ]
+        },
+
+        "apps": {
+            "firefox": {
+                "urls": ["https://discord.com/developers/applications", "https://discordjs.guide/", "https://chatgpt.com/"]
+            },
+
+            "spotify": { "enabled": true },
+
+            "code": {
+                "details": [
+                    {
+                        "path": "C:/Users/Theo/Documents/Code/DiscordBots/${argsFromProfile_0}",
+                        "withCommandInTerminal": ["npm install", "npm run dev"]
+                    }
+                ]
+            }
+        },
+
+        "customCommands": [
+            {
+                "command": "node -v"
+            },
+            {
+                "command": "npm -v"
+            }
+        ]
     }
 }
