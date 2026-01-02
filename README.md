@@ -36,7 +36,16 @@ Example command:
 devmode minecraft mypack
 ```
 This will open a development environment as defined in the minecraft profile inside profiles.json.
-
 For more information, please check the profiles.json file — it contains a complete example.
-
 A GUI to make profile creation easier will be added later.
+
+---
+
+## ⬇️ Installation
+
+For now, installation is very simple:
+- Download or clone the repository
+- Place the folder anywhere you want on your machine
+- Add the folder path to your system PATH environment variable
+
+Once done, you’ll be able to run devmode from any directory in your terminal
