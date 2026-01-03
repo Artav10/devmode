@@ -1,0 +1,76 @@
+<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Create Profile" Height="600" Width="450" WindowStartupLocation="CenterScreen">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/> <!-- Name -->
+            <RowDefinition Height="Auto"/> <!-- Args Header -->
+            <RowDefinition Height="150"/>  <!-- Args List -->
+            <RowDefinition Height="Auto"/> <!-- Apps Header -->
+            <RowDefinition Height="*"/>    <!-- Apps List -->
+            <RowDefinition Height="Auto"/> <!-- Footer -->
+        </Grid.RowDefinitions>
+
+        <!-- Profile Name Section -->
+        <StackPanel Grid.Row="0" Margin="0,0,0,10">
+            <Label Content="Profile Name" FontWeight="Bold"/>
+            <TextBox Name="txtProfileName" Padding="5"/>
+        </StackPanel>
+
+        <!-- Arguments Header -->
+        <Grid Grid.Row="1" Margin="0,0,0,5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Arguments (Optional)" FontWeight="Bold"/>
+            <Button Name="btnAddArg" Content="+" Width="25" Height="25" Grid.Column="1" 
+                    ToolTip="Add new argument"/>
+        </Grid>
+
+        <!-- Arguments List -->
+        <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto" Margin="0,0,0,10">
+            <StackPanel Name="pnlArguments">
+                <!-- Dynamic arguments will be added here -->
+            </StackPanel>
+        </ScrollViewer>
+
+        <!-- Apps Section -->
+        <Grid Grid.Row="3" Margin="0,0,0,5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Select Apps" FontWeight="Bold"/>
+            <TextBox Name="txtSearchApps" Width="150" Padding="2" ToolTip="Search Apps..."/>
+        </Grid>
+
+        <ListView Name="lstApps" Grid.Row="4" Margin="0,0,0,10">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Select" Width="50">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <CheckBox IsChecked="{Binding IsSelected, Mode=TwoWay}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Icon" Width="40">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding Icon}" Width="16" Height="16"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Name" Width="250" DisplayMemberBinding="{Binding Name}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <!-- Footer Actions -->
+        <StackPanel Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Name="btnCancel" Content="Cancel" Width="80" Height="25" Margin="0,0,10,0"/>
+            <Button Name="btnCreate" Content="Create" Width="80" Height="25"/>
+        </StackPanel>
+    </Grid>
+</Window>

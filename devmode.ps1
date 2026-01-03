@@ -2,7 +2,7 @@
 param (
   # Mode name (common to all cases)
   [Parameter(
-    Mandatory = $true,
+    # Mandatory = $true,
     Position = 0
   )]
   [string]$profileName,
@@ -30,7 +30,7 @@ param (
 
 #imports
 . "$PSScriptRoot\gui\editMenu.ps1"
-. "$PSScriptRoot\gui\createProfile.ps1"
+. "$PSScriptRoot\gui\create\createProfile.ps1"
 . "$PSScriptRoot\lib\launch\git.ps1"
 . "$PSScriptRoot\lib\launch\apps.ps1"
 . "$PSScriptRoot\lib\launch\custom_commands.ps1"
@@ -86,7 +86,7 @@ switch ($PSCmdlet.ParameterSetName) {
 
   'Create' {
     Write-Host "Creating profile '$profileName'"
-    Show-CreateGui
+    Show-CreateGui -defaultProfileName $profileName
   }
 
   'Edit' {
