@@ -5,7 +5,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/> <!-- Name -->
             <RowDefinition Height="Auto"/> <!-- Args Header -->
-            <RowDefinition Height="150"/>  <!-- Args List -->
+            <RowDefinition Height="Auto"/>  <!-- Args List -->
             <RowDefinition Height="Auto"/> <!-- Apps Header -->
             <RowDefinition Height="*"/>    <!-- Apps List -->
             <RowDefinition Height="Auto"/> <!-- Footer -->
@@ -42,7 +42,7 @@
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
             <Label Content="Select Apps" FontWeight="Bold"/>
-            <TextBox Name="txtSearchApps" Width="150" Padding="2" ToolTip="Search Apps..."/>
+            <TextBox Name="txtSearchApps" Width="200" Padding="2" ToolTip="Search Apps..."/>
         </Grid>
 
         <ListView Name="lstApps" Grid.Row="4" Margin="0,0,0,10">
